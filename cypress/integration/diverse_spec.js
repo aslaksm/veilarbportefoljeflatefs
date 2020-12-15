@@ -198,4 +198,3 @@ describe('Diverse', () => {
         cy.getByTestId('modal-suksess_tildel-veileder').should('not.exist');
     });
 });
-
