@@ -38,7 +38,7 @@ function logViolations(violations) {
     cy.task('log', `\n${toViolationTableStr(violations)}\n`);
 }
 
-xbefore('Start server', () => {
+before('Start server', () => {
     cy.configure();
 });
 xdescribe('Universell utforming', () => {
