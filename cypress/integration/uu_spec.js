@@ -38,11 +38,10 @@ function logViolations(violations) {
     cy.task('log', `\n${toViolationTableStr(violations)}\n`);
 }
 
-before('Start server', () => {
+xbefore('Start server', () => {
     cy.configure();
 });
-
-describe('Universell utforming', () => {
+xdescribe('Universell utforming', () => {
     it('Hovedside skal oppfylle UU-krav', () => {
         cy.injectAxe();
         cy.checkA11y(null, null, logViolations);
