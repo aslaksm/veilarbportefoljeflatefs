@@ -5,6 +5,8 @@ import TourModalButton from '../../modal/tour-modal/tour-modal-button';
 import '../endringslogg.less';
 import '../collapse-container-transition.less';
 import {FeaturesState} from '../../../ducks/features';
+import CoachmarksButton from '../../coachmarks/coachmarks-button';
+import {CoachmarksName} from '../../coachmarks/coachmarks';
 
 export interface EndringsloggInnlegg {
     tittel: string;
@@ -21,6 +23,22 @@ export interface EndringsloggInnleggMedSettStatus extends EndringsloggInnlegg {
 }
 
 const endringslogginnhold: EndringsloggInnlegg[] = [
+    {
+        dato: '8. februar 2021',
+        tittel: 'Siste endringer',
+        versjonId: '08.02.21',
+        tekst: 'Siste endringer blabla coachmarks stepper',
+        children: (
+            <>
+                <CoachmarksButton coachmarks={CoachmarksName.SISTE_ENDRINGER} />
+                <EndringsloggLinkMedIkon
+                    url="https://navno.sharepoint.com/sites/fag-og-ytelser-arbeid-arbeidsrettet-brukeroppfolging/SitePages/Lagre-filtre-i-Min-oversikt.aspx "
+                    linkTekst="Nyhetssak på Navet"
+                    className="endringslogg_mine-filter"
+                />
+            </>
+        )
+    },
     {
         dato: '10. desember 2020',
         tittel: 'Endre info om søknadsprosessen',
