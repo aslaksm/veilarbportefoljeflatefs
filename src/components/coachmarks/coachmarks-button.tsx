@@ -12,7 +12,7 @@ interface CoachmarksStepperProps {
 
 export default function CoachmarksButton(props: CoachmarksStepperProps) {
     const [open, setOpen] = useState(false);
-    const htmlElem: HTMLElement = document.getElementById('filter_tab')!;
+    // const htmlElem: HTMLElement = document.getElementById('filter_tab')!;
 
     return (
         <>
@@ -30,7 +30,6 @@ export default function CoachmarksButton(props: CoachmarksStepperProps) {
 
             <Coachmarks
                 hidden={!open}
-                ankerEl={open ? htmlElem : undefined}
                 coachmarksname={props.coachmarks}
                 onClose={() => setOpen(false)}
                 open={open}
